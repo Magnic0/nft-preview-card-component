@@ -1,0 +1,29 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    background-color: $color-main-bg;
+    font-family: $font-def;
+    font-weight: $fontWei-def;
+    font-size: $fontSize-def;
+    color: $color-def;
+}
+
+body {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    color: $color-white;
+    text-decoration: none;
+
+    &:visited {
+        color: $color-white;
+    }
+}

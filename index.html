@@ -8,23 +8,47 @@
   
   <title>Frontend Mentor | NFT preview card component</title>
 
-</head>
-<body>
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <section>
-    Equilibrium #3429
-  
-    Our Equilibrium collection promotes balance and calm.
-  
-    0.041 ETH
-    3 days left
+  <!--Styles-->
+  <link rel="stylesheet" href="./dist/style.css">
+
+</head>
+
+<body>
+  <section class="card">
+    <img src="./images/image-equilibrium.jpg" alt="Equilibrium NFT">
+
+    <div class="card__desc">
+      <h2>Equilibrium #3429</h2>
     
-    Creation of Jules Wyvern
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+
+      <div class="card__stats">
+        <div>
+          <img src="./images/icon-ethereum.svg"><span class="sp-bd">0.041 ETH</span>
+        </div>
+        <div>
+          <img src="./images/icon-clock.svg"><span>3 days left</span>
+        </div>
+      </div>
+
+      <div class="line"></div>
+      
+    </div>
+    
+    <div class="card__aut">
+      <img src="./images/image-avatar.png" alt="NTF creator circled avatar">
+      <span>Creation of <a href="#">Jules Wyvern</a></span>
+    </div>
   </section>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Nicolas Oliveira (Magnic0)</a>.
-  </div>
+  <section class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p> 
+    <p>Coded by <a href="https://github.com/Magnic0">Magnic0</a>.</p>
+  </section>
 </body>
 </html>
