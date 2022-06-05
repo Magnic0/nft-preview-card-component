@@ -22,8 +22,15 @@ h1, h2, h3, h4 {
 a {
     color: $color-white;
     text-decoration: none;
+    transition: 200ms;
 
     &:visited {
         color: $color-white;
+    }
+
+    @media (min-width: $width-mobile) {
+        &:hover {
+            color: $color-cyan;
+        }
     }
 }

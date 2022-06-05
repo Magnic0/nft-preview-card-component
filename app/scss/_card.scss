@@ -4,22 +4,31 @@
     background-color: $color-card-bg;
     padding: 25px;
     margin: 40px 25px;
-    margin-bottom: 0px;
     border-radius: 15px;
     
-    & img {
-        max-width: 100%;
-        border-radius: 10px;
+    & .card__img {
+        & .card__img-main {
+            position: relative;
+            max-width: 100%;
+            border-radius: 10px;
+            transition: 200ms;
+        }
+
+        & .card__img-view {
+            position: absolute;
+            display: none;
+            top: 25%;
+            left: 42.5%;
+        }
     }
 
     
     & .card__desc {
         margin-top: 29px;
         
-        & h2 {
+        & a {
             font-size: $fontSize-h2;
             font-weight: $fontWei-bold;
-            color: $color-white;
         }
 
         & p {
@@ -64,7 +73,24 @@
         }
     }
     
-    @media (min-width: 24em) {
-        // desktop style
+    @media (min-width: $width-mobile) {
+        width: 17rem;
+        height: 31rem;
+        margin: 10vh auto;
+        margin-bottom: 0px;
+
+        & .card__img {
+            &:hover {
+                cursor: pointer;
+
+                & .card__img-main {
+                    filter: opacity(0.3) drop-shadow(0px 0px 0px $color-cyan) brightness(1.5);
+                }
+    
+                & .card__img-view {
+                    display: flex;
+                }
+            }
+        }
     }
 }

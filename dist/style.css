@@ -23,10 +23,18 @@ h1, h2, h3, h4 {
 a {
   color: white;
   text-decoration: none;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 
 a:visited {
   color: white;
+}
+
+@media (min-width: 375px) {
+  a:hover {
+    color: #00fff7;
+  }
 }
 
 .card {
@@ -34,23 +42,31 @@ a:visited {
   background-color: #14253d;
   padding: 25px;
   margin: 40px 25px;
-  margin-bottom: 0px;
   border-radius: 15px;
 }
 
-.card img {
+.card .card__img .card__img-main {
+  position: relative;
   max-width: 100%;
   border-radius: 10px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.card .card__img .card__img-view {
+  position: absolute;
+  display: none;
+  top: 25%;
+  left: 42.5%;
 }
 
 .card .card__desc {
   margin-top: 29px;
 }
 
-.card .card__desc h2 {
+.card .card__desc a {
   font-size: 1.3125rem;
   font-weight: 600;
-  color: white;
 }
 
 .card .card__desc p {
@@ -94,12 +110,40 @@ a:visited {
   border-radius: 50%;
 }
 
+@media (min-width: 375px) {
+  .card {
+    width: 17rem;
+    height: 31rem;
+    margin: 10vh auto;
+    margin-bottom: 0px;
+  }
+  .card .card__img:hover {
+    cursor: pointer;
+  }
+  .card .card__img:hover .card__img-main {
+    -webkit-filter: opacity(0.3) drop-shadow(0px 0px 0px #00fff7) brightness(1.5);
+            filter: opacity(0.3) drop-shadow(0px 0px 0px #00fff7) brightness(1.5);
+  }
+  .card .card__img:hover .card__img-view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .attribution {
   text-align: center;
-  margin: 20px 0px;
+  margin: 8% 0px;
 }
 
 .attribution p {
   margin: 0px;
+}
+
+@media (min-width: 375px) {
+  .attribution {
+    margin-top: 5vh;
+    margin-bottom: 0px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
