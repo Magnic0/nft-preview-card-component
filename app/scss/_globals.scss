@@ -1,34 +1,35 @@
-html {
-    font-size: 100%;
+:root {
     box-sizing: border-box;
-    background-color: $color-main-bg;
+    color: $color-def;
     font-family: $font-def;
     font-weight: $fontWei-def;
     font-size: $fontSize-def;
-    color: $color-def;
+    user-select: none;
 }
 
-body {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-}
-
-h1, h2, h3, h4 {
-    margin: 0px;
-    padding: 0px;
-}
-
-a {
-    color: $color-white;
-    text-decoration: none;
-    transition: 200ms;
-
-    &:visited {
-        color: $color-white;
+html {
+    background-color: $color-main-bg;
+    
+    & body {
+        position: relative;
+        margin: 0px;
+        padding: 0px;
     }
-
-    @media (min-width: $width-mobile) {
+    
+    & h1, h2, h3, h4 {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    & a {
+        color: $color-white;
+        text-decoration: none;
+        transition: 200ms;
+    
+        &:visited {
+            color: $color-white;
+        }
+    
         &:hover {
             color: $color-cyan;
         }
