@@ -7,17 +7,28 @@
 }
 
 html {
+    align-items: center;
     background-color: $color-main-bg;
-    
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    min-height: 40.625rem;
+
     & body {
+        width: 100%;
         box-sizing: border-box;
         position: relative;
         margin: 0px;
         padding: 0px;
-        min-width: 340px;
+        min-width: 21.25rem;
 
         & main {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
             height: 100%;
+            width: 100%;
         }
 
         & h1, h2, h3, h4 {

@@ -10,17 +10,28 @@
 }
 
 html {
+  align-items: center;
   background-color: hsl(217deg, 54%, 11%);
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-height: 40.625rem;
 }
 html body {
+  width: 100%;
   box-sizing: border-box;
   position: relative;
   margin: 0px;
   padding: 0px;
-  min-width: 340px;
+  min-width: 21.25rem;
 }
 html body main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
   height: 100%;
+  width: 100%;
 }
 html body h1, html body h2, html body h3, html body h4 {
   margin: 0px;
@@ -47,21 +58,22 @@ html body footer {
 .card {
   align-items: center;
   background-color: hsl(216deg, 50%, 16%);
-  border-radius: 15px;
-  box-shadow: 0px 10px 10px 18px hsl(217deg, 58%, 11%);
+  border-radius: 0.938rem;
+  box-shadow: 0px 0.625rem 0.625rem 1.125rem hsl(217deg, 58%, 11%);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: 10vh auto 5vh auto;
-  padding: 25px;
-  width: 325px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 1.563rem;
+  width: 20.313rem;
 }
 .card__img {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   width: 100%;
 }
 .card__img--nft {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   width: 100%;
 }
 .card__img::after {
@@ -69,7 +81,7 @@ html body footer {
   position: absolute;
   left: 50%;
   padding: 111.567px 113.5px;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   opacity: 0;
   transform: translate(-50%, 0);
   transition: 100ms;
@@ -95,8 +107,8 @@ html body footer {
   flex-wrap: wrap;
   justify-content: space-between;
   font-size: 1rem;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 .card__stats--price {
@@ -107,7 +119,7 @@ html body footer {
 .card__stats--price::before {
   content: url(../../images/icon-ethereum.svg);
   vertical-align: middle;
-  margin-right: 7px;
+  margin-right: 0.438rem;
 }
 .card__stats--time {
   letter-spacing: 0px;
@@ -115,33 +127,30 @@ html body footer {
 .card__stats--time::before {
   content: url(../../images/icon-clock.svg);
   vertical-align: middle;
-  margin-right: 7px;
+  margin-right: 0.438rem;
 }
 .card__stats::after {
   background-color: hsl(215deg, 32%, 27%);
   border-radius: 1px;
   content: "";
   flex-basis: 100%;
-  height: 2px;
-  margin: 15px 0px;
+  height: 0.125rem;
+  margin: 0.938rem 0;
 }
 .card__author img {
   border: 1px solid hsl(0deg, 0%, 100%);
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   vertical-align: middle;
   width: 10%;
 }
 .card__author span {
   vertical-align: middle;
 }
-@media screen and (min-width: 900px) {
-  .card {
-    margin-top: 18vh;
-  }
+@media screen and (min-width: 56.25rem) {
   .card__img:hover {
     cursor: pointer;
-    filter: drop-shadow(inset 10px 10px blue);
+    filter: drop-shadow(inset 0.625rem 0.625rem blue);
   }
   .card__img:hover::after {
     opacity: 1;
@@ -151,7 +160,7 @@ html body footer {
 .attribution {
   text-align: center;
   margin: 0;
-  margin-bottom: 5vh;
+  margin-bottom: 1rem;
 }
 .attribution p {
   margin: 0px;
