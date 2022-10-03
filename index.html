@@ -14,44 +14,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!--Styles-->
-  <link rel="stylesheet" href="./dist/style.css">
-
+  <link rel="stylesheet" href="./dist/css/style.css">
 </head>
 
 <body>
-  <section class="card">
-    <div class="card__img">
-      <img class="card__img-main" src="./images/image-equilibrium.jpg">
-      <img class="card__img-view" src="./images/icon-view.svg" alt="Equilibrium NFT"></img>
-    </div>
-
-    <div class="card__desc">
-      <a href="#">Equilibrium #3429</a>
-    
-      <p>Our Equilibrium collection promotes balance and calm.</p>
-
-      <div class="card__stats">
-        <div>
-          <img src="./images/icon-ethereum.svg"><span class="sp-bd">0.041 ETH</span>
-        </div>
-        <div>
-          <img src="./images/icon-clock.svg"><span>3 days left</span>
-        </div>
+  <main>
+    <section class="card">
+      <div class="card__img">
+        <img class="card__img--nft" src="images/image-equilibrium.jpg" alt="Equilibrium NFT representation image">
+      </div>
+  
+      <div class="card__desc">
+        <h2>Equilibrium #3429</h2>
+      
+        <p>Our Equilibrium collection promotes balance and calm.</p>
       </div>
 
-      <div class="line"></div>
+      <div class="card__stats">
+        <span class="card__stats--price">0.041 ETH</span>
+        <span class="card__stats--time">3 days left</span>
+      </div>
       
-    </div>
-    
-    <div class="card__aut">
-      <img src="./images/image-avatar.png" alt="NTF creator circled avatar">
-      <span>Creation of <a href="#">Jules Wyvern</a></span>
-    </div>
-  </section>
+      <div class="card__author">
+        <img src="./images/image-avatar.png" alt="Profile photo of the NTF creator">
+        <span>Creation of <a href="#">Jules Wyvern</a></span>
+      </div>
+    </section>
+  </main>
 
-  <section class="attribution">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p> 
-    <p>Coded by <a href="https://github.com/Magnic0" target="_blank">Magnic0</a>.</p>
-  </section>
+  <footer>
+    <section class="attribution">
+      <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+      <br>
+      <span>Coded by <a href="https://github.com/Magnic0" target="_blank">Magnic0</a>.</span>
+    </section>
+  </footer>
 </body>
 </html>

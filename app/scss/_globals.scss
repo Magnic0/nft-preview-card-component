@@ -1,36 +1,47 @@
-html {
-    font-size: 100%;
-    box-sizing: border-box;
-    background-color: $color-main-bg;
+:root {
+    color: $color-def;
     font-family: $font-def;
     font-weight: $fontWei-def;
     font-size: $fontSize-def;
-    color: $color-def;
+    user-select: none;
 }
 
-body {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-}
+html {
+    background-color: $color-main-bg;
+    
+    & body {
+        box-sizing: border-box;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        min-width: 340px;
 
-h1, h2, h3, h4 {
-    margin: 0px;
-    padding: 0px;
-}
-
-a {
-    color: $color-white;
-    text-decoration: none;
-    transition: 200ms;
-
-    &:visited {
-        color: $color-white;
-    }
-
-    @media (min-width: $width-mobile) {
-        &:hover {
-            color: $color-cyan;
+        & main {
+            height: 100%;
         }
-    }
+
+        & h1, h2, h3, h4 {
+            margin: 0px;
+            padding: 0px;
+            width: fit-content;
+        }
+        
+        & a {
+            color: $color-white;
+            text-decoration: none;
+            transition: 200ms;
+        
+            &:visited {
+                color: $color-white;
+            }
+        
+            &:hover {
+                color: $color-cyan;
+            }
+        }
+
+        & footer {
+            box-sizing: border-box;
+        }
+    }    
 }
