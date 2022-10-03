@@ -1,5 +1,4 @@
 :root {
-    box-sizing: border-box;
     color: $color-def;
     font-family: $font-def;
     font-weight: $fontWei-def;
@@ -11,27 +10,38 @@ html {
     background-color: $color-main-bg;
     
     & body {
+        box-sizing: border-box;
         position: relative;
         margin: 0px;
         padding: 0px;
-    }
-    
-    & h1, h2, h3, h4 {
-        margin: 0px;
-        padding: 0px;
-    }
-    
-    & a {
-        color: $color-white;
-        text-decoration: none;
-        transition: 200ms;
-    
-        &:visited {
+        min-width: 340px;
+
+        & main {
+            height: 100%;
+        }
+
+        & h1, h2, h3, h4 {
+            margin: 0px;
+            padding: 0px;
+            width: fit-content;
+        }
+        
+        & a {
             color: $color-white;
+            text-decoration: none;
+            transition: 200ms;
+        
+            &:visited {
+                color: $color-white;
+            }
+        
+            &:hover {
+                color: $color-cyan;
+            }
         }
-    
-        &:hover {
-            color: $color-cyan;
+
+        & footer {
+            box-sizing: border-box;
         }
-    }
+    }    
 }
