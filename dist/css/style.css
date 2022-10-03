@@ -1,119 +1,158 @@
-html {
-  font-size: 100%;
-  box-sizing: border-box;
-  background-color: hsl(217deg, 54%, 11%);
+:root {
+  color: hsl(215deg, 52%, 70%);
   font-family: "Outfit", sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  color: hsl(215deg, 52%, 70%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-body {
+html {
+  background-color: hsl(217deg, 54%, 11%);
+}
+html body {
+  box-sizing: border-box;
   position: relative;
   margin: 0px;
   padding: 0px;
+  min-width: 340px;
 }
-
-h1, h2, h3, h4 {
+html body main {
+  height: 100%;
+}
+html body h1, html body h2, html body h3, html body h4 {
   margin: 0px;
   padding: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-
-a {
+html body a {
   color: hsl(0deg, 0%, 100%);
   text-decoration: none;
   transition: 200ms;
 }
-a:visited {
+html body a:visited {
   color: hsl(0deg, 0%, 100%);
 }
-@media (min-width: 375px) {
-  a:hover {
-    color: hsl(178deg, 100%, 50%);
-  }
+html body a:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+html body footer {
+  box-sizing: border-box;
 }
 
 .card {
-  display: flex;
+  align-items: center;
   background-color: hsl(216deg, 50%, 16%);
-  padding: 25px;
-  margin: 40px 25px;
   border-radius: 15px;
+  box-shadow: 0px 10px 10px 18px hsl(217deg, 58%, 11%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 10vh auto 5vh auto;
+  padding: 25px;
+  width: 325px;
 }
 .card__img {
-  width: 80%;
+  margin-bottom: 20px;
+  width: 100%;
 }
-.card__img img {
-  width: 10px;
+.card__img--nft {
   border-radius: 10px;
-  transition: 200ms;
+  width: 100%;
 }
-.card .card__desc {
-  margin-top: 29px;
+.card__img::after {
+  content: url(../../images/icon-view.svg);
+  position: absolute;
+  left: 50%;
+  padding: 111.567px 113.5px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translate(-50%, 0);
+  transition: 100ms;
+  background-color: rgba(0, 255, 247, 0.5);
 }
-.card .card__desc a {
+.card__desc h2 {
+  color: hsl(0deg, 0%, 100%);
   font-size: 1.3125rem;
   font-weight: 600;
+  transition: 200ms;
 }
-.card .card__desc p {
+.card__desc h2:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.card__desc p {
   font-size: 1rem;
+  line-height: 1.6rem;
 }
-.card .card__stats {
+.card__stats {
+  align-items: center;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1rem;
   margin: 0px;
   padding: 0px;
-  justify-content: space-between;
+  width: 100%;
 }
-.card .card__stats div img {
-  vertical-align: text-top;
-  margin-top: 1px;
-  margin-right: 8px;
-}
-.card .card__stats div .sp-bd {
-  font-weight: 600;
+.card__stats--price {
   color: hsl(178deg, 100%, 50%);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
-.card .line {
-  height: 1px;
+.card__stats--price::before {
+  content: url(../../images/icon-ethereum.svg);
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.card__stats--time {
+  letter-spacing: 0px;
+}
+.card__stats--time::before {
+  content: url(../../images/icon-clock.svg);
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.card__stats::after {
   background-color: hsl(215deg, 32%, 27%);
-  margin: 17px 0px;
+  border-radius: 1px;
+  content: "";
+  flex-basis: 100%;
+  height: 2px;
+  margin: 15px 0px;
 }
-.card .card__aut img {
-  max-width: 10%;
-  margin-bottom: 2px;
+.card__author img {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
-  border: 2px solid hsl(0deg, 0%, 100%);
-  border-radius: 50%;
+  width: 10%;
 }
-@media (min-width: 375px) {
+.card__author span {
+  vertical-align: middle;
+}
+@media screen and (min-width: 900px) {
   .card {
-    width: 17rem;
-    height: 31rem;
-    margin: 10vh auto;
-    margin-bottom: 0px;
+    margin-top: 18vh;
   }
-  .card .card__img:hover {
+  .card__img:hover {
     cursor: pointer;
+    filter: drop-shadow(inset 10px 10px blue);
   }
-  .card .card__img:hover .card__img-main {
-    filter: opacity(0.3) drop-shadow(0px 0px 0px hsl(178deg, 100%, 50%)) brightness(1.5);
-  }
-  .card .card__img:hover .card__img-view {
-    display: flex;
+  .card__img:hover::after {
+    opacity: 1;
   }
 }
 
 .attribution {
   text-align: center;
-  margin: 8% 0px;
+  margin: 0;
+  margin-bottom: 5vh;
 }
 .attribution p {
   margin: 0px;
-}
-@media (min-width: 375px) {
-  .attribution {
-    margin-top: 5vh;
-    margin-bottom: 0px;
-  }
 }/*# sourceMappingURL=style.css.map */
